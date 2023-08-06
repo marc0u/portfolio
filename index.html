@@ -5,27 +5,51 @@
     <title>Marco's Portfolio</title>
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;1,200;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section id="home">
       <div class="canvas">
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas" class="fullscreen"></canvas>
       </div>
       <div class="presentation">
+        <img src="assets/profile-photo.jpg" alt="profile photo" class="profile-photo" />
         <h1>Hey, I'm Marco Urriola</h1>
         <h2>I'm an electrical engineer and a full-stack web developer based in Santiago, Chile.</h2>
         <p>
           I've enjoyed solving problems by creating simple, beautiful and usefull apps. In my spear
           time you'll find me listening music, cooking or working out.
         </p>
-        <button class="btn-1">Let's know me!</button>
+        <button class="btn-1" onClick="document.getElementById('skills').scrollIntoView();">
+          Let's know me!
+        </button>
       </div>
     </section>
-    <section id="about"></section>
-    <section id="skills"></section>
-    <section id="hobbies"></section>
-    <section id="portfolio"></section>
-    <section id="contact"></section>
+    <section id="skills" class="fullscreen"><h1>skills</h1></section>
+    <section id="projects" class="fullscreen"><h1>projects</h1></section>
+    <section id="contact" class="fullscreen"><h1>contact</h1></section>
+    <footer>
+      <div class="flex-center">
+        <button class="btn-1" onClick="document.getElementById('home').scrollIntoView();">
+          <i class="fa fa-caret-up"></i>
+        </button>
+      </div>
+      <div class="flex-center">
+        <p>© 2023 Marco Urriola</p>
+        <a href="https://github.com/marc0u" class="social" target="_blank"
+          ><i class="fa fa-github"></i
+        ></a>
+      </div>
+    </footer>
     <script src="scripts/canvas.js"></script>
   </body>
 </html>

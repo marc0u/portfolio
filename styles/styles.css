@@ -1,11 +1,39 @@
-.canvas {
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+footer {
     background-color: #344e41;
+    color: white;
+}
+
+.fullscreen {
     width: 100%;
     height: 100vh;
 }
 
-#home {
-    position: relative;
+.canvas {
+    background-color: #344e41;
 }
 
 .presentation {
@@ -14,26 +42,61 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    color: #fff;
+    color: white;
     text-align: center;
 }
 
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-p {
-    font-size: 1.5rem;
-}
-
 .btn-1 {
+    margin: 1.5rem 0;
     background-color: transparent;
     border-width: 1px;
-    border-color: #fff;
-    padding: 10px;
-    color:#fff;
+    border-color: white;
+    padding: 0.8rem 2rem;
+    color:white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn-1:hover {
+    background-color: #588157;
+    border-width: 2px;
+    cursor: pointer;
+}
+
+.profile-photo {
+    height: 13rem;
+    border-radius: 50%;
+}
+
+.icon {
+    width: 1rem;
+    fill: #fff;
+}
+
+.relative-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.relative {
+    position: relative;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+#home {
+    position: relative;
 }
