@@ -25,7 +25,7 @@
         <br />
         <div>
           <img src="assets/profile-photo.jpg" alt="profile photo" class="profile-photo" />
-          <h1 class="anim-typewriter">Hey, I'm Marco Urriola</h1>
+          <h1>Hey, I'm Marco Urriola</h1>
         </div>
         <div
           class="scrolldown flex-center flex-column"
@@ -105,12 +105,30 @@
     <section id="contact" class="flex-center flex-column">
       <h1 class="title">contact</h1>
       <div class="title-line"></div>
+      <form id="contact-form" class="flex-center flex-column">
+        <input class="fields" placeholder="Name" type="text" name="name" required="" />
+        <input class="fields" placeholder="Enter email" type="email" name="email" required="" />
+        <textarea placeholder="Your Message" type="text" name="message"></textarea>
+        <div id="success">
+          <div>We will be in touch soon. Thanks!</div>
+        </div>
+        <input class="btn-1" type="submit" id="submit" value="SUBMIT" />
+      </form>
     </section>
     <footer>
       <div class="flex-center">
-        <button class="btn-1" onClick="document.getElementById('home').scrollIntoView();">
+        <!-- <button class="btn-1" onClick="document.getElementById('home').scrollIntoView();">
           <i class="fa fa-caret-up"></i>
-        </button>
+        </button> -->
+        <nav>
+          <ul class="flex-center">
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </nav>
       </div>
       <div class="flex-center">
         <p>© 2023 Marco Urriola</p>
@@ -119,6 +137,9 @@
         ></a>
       </div>
     </footer>
+    <div class="menu">
+      <i class="fa fa-bars"></i>
+    </div>
     <script src="scripts/canvas.js"></script>
     <script src="scripts/scrolling.js"></script>
   </body>
