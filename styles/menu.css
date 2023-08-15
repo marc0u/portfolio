@@ -1,0 +1,113 @@
+#menu {
+  z-index: 2;
+}
+
+#menu-bar:hover {
+  transform: scale(1.1);
+}
+
+#menu-bar {
+  position: fixed;
+  bottom: 0px;
+  right: -5rem;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  height: 3rem;
+  width: 3rem;
+  margin: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all 0.2s ease-out;
+}
+
+.bar {
+  height: 5px;
+  width: 60%;
+  background-color: black;
+  display: block;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.nav {
+  transition: 0.3s ease;
+  display: none;
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+}
+
+.nav ul {
+  padding: 0 0.25rem;
+}
+
+.nav li {
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+.nav li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  font-weight: bold;
+  color: black;
+}
+
+.menu-bg,
+#menu {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+}
+
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 30px 0 20px 20px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.change {
+  display: block;
+}
+
+.change .bar {
+  background-color: white;
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+
+.change-bg {
+  width: 350px;
+  height: 450px;
+  transform: translate(60%, 30%);
+}

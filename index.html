@@ -5,6 +5,7 @@
     <title>Marco's Portfolio</title>
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/menu.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -39,15 +40,23 @@
     <section id="about" class="flex-center flex-column">
       <h1 class="title">about</h1>
       <div class="title-line"></div>
-      <h2>I'm an electrical engineer and a full-stack web developer based in Santiago, Chile.</h2>
+      <p>I'm an electrical engineer and a full-stack web developer based in Santiago, Chile.</p>
       <p>I've enjoyed solving problems by creating simple, beautiful and usefull apps.</p>
+      <p>I'am PMP® certified (PMI) and I'm really into agile mindset.</p>
       <p>In my spear time you'll find me listening music, cooking or working out.</p>
-      <p>I love coffee and travel!</p>
+      <p>I'm a bit of a clean freak.</p>
+      <p>I love ☕ and ✈️!</p>
     </section>
     <section id="skills" class="flex-center flex-column">
       <h1 class="title">skills</h1>
       <div class="title-line"></div>
       <div class="skills-container" data-animation="slide-in-right">
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 95%">
+            <p class="skill">PM/SOFT SKILLS</p>
+          </div>
+          <p class="skill-progress">95%</p>
+        </div>
         <div class="skill-bar">
           <div class="skill-bar-fill" style="width: 70%">
             <p class="skill">CSS</p>
@@ -105,21 +114,31 @@
     <section id="contact" class="flex-center flex-column">
       <h1 class="title">contact</h1>
       <div class="title-line"></div>
-      <form id="contact-form" class="flex-center flex-column">
-        <input class="fields" placeholder="Name" type="text" name="name" required="" />
-        <input class="fields" placeholder="Enter email" type="email" name="email" required="" />
-        <textarea placeholder="Your Message" type="text" name="message"></textarea>
-        <div id="success">
-          <div>We will be in touch soon. Thanks!</div>
-        </div>
+      <form
+        id="contact-form"
+        class="flex-center flex-column"
+        action="https://formsubmit.co/5295157ccd410078f94c8154ff8daa0d"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="Portfolio Contact" />
+        <input type="hidden" name="_autoresponse" value="We will be in touch soon. 😉 Thanks!" />
+        <input type="hidden" name="_template" value="table" />
+        <input id="name" class="fields" placeholder="Name" type="text" name="name" required="" />
+        <input
+          id="email"
+          class="fields"
+          placeholder="Enter email"
+          type="email"
+          name="email"
+          required=""
+        />
+        <textarea id="message" placeholder="Your Message" type="text" name="message"></textarea>
+        <span id="success"></span>
         <input class="btn-1" type="submit" id="submit" value="SUBMIT" />
       </form>
     </section>
-    <footer>
+    <footer id="footer">
       <div class="flex-center">
-        <!-- <button class="btn-1" onClick="document.getElementById('home').scrollIntoView();">
-          <i class="fa fa-caret-up"></i>
-        </button> -->
         <nav>
           <ul class="flex-center">
             <li><a href="#home">home</a></li>
@@ -131,16 +150,30 @@
         </nav>
       </div>
       <div class="flex-center">
-        <p>© 2023 Marco Urriola</p>
         <a href="https://github.com/marc0u" class="social" target="_blank"
           ><i class="fa fa-github"></i
         ></a>
       </div>
+      <p>This website was made with pure HTML, CSS and JS (vanilla).</p>
     </footer>
-    <div class="menu">
-      <i class="fa fa-bars"></i>
+    <div id="menu">
+      <div id="menu-bar" onclick="menuOnClick()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+      </div>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#home" onclick="menuClose();">home</a></li>
+          <li><a href="#about" onclick="menuClose();">about</a></li>
+          <li><a href="#skills" onclick="menuClose();">skills</a></li>
+          <li><a href="#projects" onclick="menuClose();">projects</a></li>
+          <li><a href="#contact" onclick="menuClose();">contact</a></li>
+        </ul>
+      </nav>
     </div>
+    <div class="menu-bg" id="menu-bg"></div>
     <script src="scripts/canvas.js"></script>
-    <script src="scripts/scrolling.js"></script>
+    <script src="scripts/menu.js"></script>
   </body>
 </html>
