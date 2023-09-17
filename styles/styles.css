@@ -4,6 +4,10 @@
   --accent-color: #31adb5;
 }
 
+a:visited {
+  color: var(--secondary-color);
+}
+
 input,
 textarea,
 select {
@@ -195,6 +199,16 @@ footer {
   width: 100%;
 }
 
+@media only screen and (min-width: 768px) {
+  .skills-container {
+    max-width: 600px;
+  }
+
+  #contact-form {
+    max-width: 600px;
+  }
+}
+
 .skill-bar {
   display: flex;
   margin: 0 15px 15px 15px;
@@ -287,4 +301,61 @@ footer p {
   background-color: var(--primary-color);
   margin: 0;
   padding: 0.8rem 0;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 800px;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 15px;
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  transition: ease;
+  transition-duration: 0.2s;
+}
+
+.project-details {
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  background-color: white;
+  width: 100%;
+}
+
+.project-details:hover {
+  cursor: pointer;
+}
+
+.project-details p {
+  font-size: 1rem;
+  text-align: left;
+}
+
+@media only screen and (max-width: 468px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 80%;
+  }
 }
