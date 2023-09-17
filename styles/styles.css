@@ -4,6 +4,14 @@
   --accent-color: #31adb5;
 }
 
+a {
+  color: black;
+}
+
+a:active {
+  color: var(--accent-color);
+}
+
 a:visited {
   color: var(--secondary-color);
 }
